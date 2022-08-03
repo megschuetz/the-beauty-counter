@@ -1,0 +1,6 @@
+.makeup-container {
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 50px;
+}

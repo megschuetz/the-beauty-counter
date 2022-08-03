@@ -1,0 +1,14 @@
+*{border: solid black 2px}
+
+.types {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+p > .types {
+  margin: 40px;
+  background-color: #FDB1B7;
+  color: white;
+  padding: 2%;
+  border-radius: 17px;
+}
