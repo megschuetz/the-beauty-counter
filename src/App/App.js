@@ -2,6 +2,8 @@ import './App.css';
 import React, { useEffect, useState }from 'react'
 import fetchResponse from '../apiCalls';
 import MakeUpContainer from '../MakeUpContainer/MakeUpContainer';
+import { Route } from 'react-router-dom';
+import Dropdown from '../Dropdown/Dropdown';
 
 function App() {
 
@@ -19,6 +21,11 @@ function App() {
     // Promise.all([NYX, maybelline, milani, clinique, covergirl, smashbox])
       .then(data => setMakeUpItems(data))
   }
+
+  const filterByType = (type) => {
+    const filteredItems = makeUpItems.filter((makeup) => makeup.product_type === type)
+    setMakeUpItems(filteredItems)
+  }
   
   
   useEffect(() => {
@@ -29,8 +36,12 @@ function App() {
     return (
       <div className="App">
         <h1>TheBeautyCounter</h1>
-        <Dropdown />
-        {makeUpItems && <MakeUpContainer allMakeUp={makeUpItems}/>}
+        <Dropdown filterByType={filterByType}/>
+        {makeUpItems && <Route exact path='/' render={() => <MakeUpContainer allMakeUp={makeUpItems}/>
+        }/>}
+        <Route path='/:product_type' render={() => {
+          <MakeUpContainer allMakeUp={makeUpItems}/>
+        }}/>
       </div>
     );
 }

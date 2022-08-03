@@ -1,28 +1,19 @@
 import React from 'react'
 import "./Dropdown.css"
+import { NavLink } from 'react-router-dom'
 
 function Dropdown() {
-
-  const [type, setType] = useState('')
-  const [tag, setTag] = useState('')
-
-  return (
-    <div>
-       <select name='type'>
-        <option value='blush'>Blush</option>
-        <option value='bronzer'>Bronzer</option>
-        <option value='eyebrow'>Eyebrow</option>
-        <option value='eyeliner'>Eyeliner</option>
-        <option value='eyeshadow'>Eyeshadow</option>
-        <option value='foundation'>Foundation</option>
-        <option value='lip_liner'>Lip liner</option>
-        <option value='lipstick'>Lipstick</option>
-        <option value='mascara'>Mascara</option>
-      </select>
-      <button onClick={}>Filter</button>
-    </div>
-    
-  )
+  <div name='types'>
+    <NavLink className='link' to={'./blush'}><p>Blush</p></NavLink>
+    <NavLink className='link' to={'./bronzer'}><p>Bronzer</p></NavLink>
+    <NavLink className='link' to={'./eyebrow'}><p>Eyebrow</p></NavLink>
+    <NavLink className='link' to={'./eyeliner'}><p>Eyeliner</p></NavLink>
+    <NavLink className='link' to={'./eyeshadow'}><p>Eyeshadow</p></NavLink>
+    <NavLink className='link' to={'./foundation'}><p>Foundation</p></NavLink>
+    <NavLink className='link' to={'./lip_liner'}><p>Lip Liner</p></NavLink>
+    <NavLink className='link' to={'./lipstick'}><p>Lip Stick</p></NavLink>
+    <NavLink className='link' to={'./mascara'}><p>Mascara</p></NavLink>
+  </div>
 }
 
 export default Dropdown;
