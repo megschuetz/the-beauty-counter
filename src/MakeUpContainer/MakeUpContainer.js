@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 import MakeUpCard from '../MakeUpCard/MakeUpCard';
-import './MakeUpContainer.css'
+import './MakeUpContainer.css';
 
 function MakeUpContainer({ allMakeUp, type, filterByType }) {
 
@@ -8,11 +8,11 @@ function MakeUpContainer({ allMakeUp, type, filterByType }) {
     if(type && filterByType) {
       filterByType(type)
     }
-  }, [type]) 
+  }, [type]); 
 
   let makeUpCards;
   
-  if(allMakeUp) 
+  if(allMakeUp) {
     makeUpCards = allMakeUp.map((makeUp) => 
         <MakeUpCard 
           key={makeUp.id}
@@ -24,6 +24,7 @@ function MakeUpContainer({ allMakeUp, type, filterByType }) {
           image={makeUp.image_link}
         /> 
     )
+  };
 
   return(
     <section className='makeup-container'>
