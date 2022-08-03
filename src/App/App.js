@@ -41,7 +41,7 @@ function App() {
       {makeUpItems && 
       <div>
         <div className='header'>
-          <h4>wild spirit, soft heart, sweet soul</h4>
+          <h4>· wild spirit, soft heart, sweet soul ·</h4>
           <div className="title">
             <h2>TheBeautyCounter</h2>
             <h2>TheBeautyCounter</h2>
