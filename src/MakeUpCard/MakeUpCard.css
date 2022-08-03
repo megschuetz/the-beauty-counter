@@ -1,7 +1,7 @@
 .makeup-card {
   width: 300px;
-  height: auto;
   padding: 0 14px ;
+  position: relative;
 }
 
 .makeup-card:hover {
@@ -9,26 +9,35 @@
 }
 
 .makeup-card:hover .name {
-  color: #fdb1b7;
+  color: #A93F55;
 }
 
 .product-img {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 300px;
 }
 
 .product-img > img {
-  width: 80%;
+  object-fit: fill;
+  overflow: hidden;
+}
+
+.product-description {
+  height: 170px;
+  font-family: "Poppins", sans-serif;
 }
 
 .name {
   font-weight: 800;
-  font-size: 20px;
+  font-size: 19px;
+  margin-bottom: 0;
 }
 
 .brand {
   text-transform: uppercase;
+  margin-top: 8px;
 }
 
 .price {
@@ -37,4 +46,8 @@
   border: solid gray 1px;
   border-radius: 9px;
   padding: 15px;
+  width: 255px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 12px;
 }

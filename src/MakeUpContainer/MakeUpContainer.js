@@ -20,7 +20,6 @@ function MakeUpContainer({ allMakeUp, type, filterByType }) {
           price={makeUp.price}
           brand={makeUp.brand}
           type={makeUp.product_type}
-          tags={makeUp.tag_list}
           image={makeUp.image_link}
         /> 
     )
