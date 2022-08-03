@@ -5,7 +5,8 @@ import './MakeUpContainer.css'
 function MakeUpContainer({ allMakeUp }) {
 
   const makeUpCards = allMakeUp.map((makeUp) => {
-    return <MakeUpCard 
+    if(makeUp.image_link) {
+      return ( <MakeUpCard 
       key={makeUp.id}
       name={makeUp.name}
       price={makeUp.price}
@@ -14,6 +15,7 @@ function MakeUpContainer({ allMakeUp }) {
       tags={makeUp.tag_list}
       image={makeUp.image_link}
     />
+    )}
   })
 
   return(
