@@ -1,22 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import MakeUpCard from '../MakeUpCard/MakeUpCard';
 import './MakeUpContainer.css'
 
-function MakeUpContainer({ allMakeUp }) {
+function MakeUpContainer({ allMakeUp, type, filterByType }) {
 
-  const makeUpCards = allMakeUp.map((makeUp) => {
-    if(makeUp.image_link) {
-      return ( <MakeUpCard 
-      key={makeUp.id}
-      name={makeUp.name}
-      price={makeUp.price}
-      brand={makeUp.brand}
-      type={makeUp.product_type}
-      tags={makeUp.tag_list}
-      image={makeUp.image_link}
-    />
-    )}
-  })
+  useEffect(() => {
+    if(type && filterByType) {
+      filterByType(type)
+    }
+  }, [type]) 
+
+  let makeUpCards;
+  
+  if(allMakeUp) 
+    makeUpCards = allMakeUp.map((makeUp) => 
+        <MakeUpCard 
+          key={makeUp.id}
+          name={makeUp.name}
+          price={makeUp.price}
+          brand={makeUp.brand}
+          type={makeUp.product_type}
+          tags={makeUp.tag_list}
+          image={makeUp.image_link}
+        /> 
+    )
 
   return(
     <section className='makeup-container'>

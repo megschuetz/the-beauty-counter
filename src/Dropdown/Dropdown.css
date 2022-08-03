@@ -1,11 +1,12 @@
 *{border: solid black 2px}
-
 .types {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
-p > .types {
+
+.link {
   margin: 40px;
   background-color: #FDB1B7;
   color: white;
