@@ -3,6 +3,7 @@ import "./Dropdown.css"
 import { NavLink } from 'react-router-dom'
 
 function Dropdown() {
+  return (
   <div name='types'>
     <NavLink className='link' to={'./blush'}><p>Blush</p></NavLink>
     <NavLink className='link' to={'./bronzer'}><p>Bronzer</p></NavLink>
@@ -14,6 +15,7 @@ function Dropdown() {
     <NavLink className='link' to={'./lipstick'}><p>Lip Stick</p></NavLink>
     <NavLink className='link' to={'./mascara'}><p>Mascara</p></NavLink>
   </div>
+  )
 }
 
 export default Dropdown;
