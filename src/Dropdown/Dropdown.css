@@ -1,7 +1,6 @@
-/* *{border: solid black 2px} */
 .type-list {
   display: grid;
-  grid-template-columns: repeat(5,1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 20px;
   padding: 10px;
   padding-top: 0px;

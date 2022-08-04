@@ -1,7 +1,6 @@
 .makeup-card {
-  width: 300px;
+  width: 400px;
   padding: 0 14px ;
-  position: relative;
 }
 
 .makeup-card:hover {
@@ -16,17 +15,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-}
-
-.product-img > img {
-  object-fit: fill;
+  height: 200px;
   overflow: hidden;
 }
 
+.product-img > img {
+  height: 100%;
+}
+
 .product-description {
-  height: 170px;
-  font-family: "Poppins", sans-serif;
+  height: 197px;
+  position: relative;
 }
 
 .name {
@@ -46,8 +45,9 @@
   border: solid gray 1px;
   border-radius: 9px;
   padding: 15px;
-  width: 255px;
+  width: 100%;
   position: absolute;
   bottom: 0;
   margin-bottom: 12px;
+  align-self: center;
 }

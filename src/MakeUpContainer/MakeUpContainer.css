@@ -1,6 +1,12 @@
-.makeup-container {
+.makeup-cards {
   display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: .5rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   padding: 50px;
+}
+
+.num-items {
+  margin-left: 1.7%;
+  margin-top: 1.1%;
+  font-size: 14px;
 }

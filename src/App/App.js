@@ -10,8 +10,8 @@ import ReactLoading from 'react-loading';
 
 function App() {
 
-  const [makeUpItems, setMakeUpItems] = useState('');
-  const [makeUpByType, setMakeUpByType] = useState('');
+  const [makeUpItems, setMakeUpItems] = useState([]);
+  const [makeUpByType, setMakeUpByType] = useState([]);
   const [error, setError] = useState('')
 
   const shuffleMakeUp = array => {
@@ -23,7 +23,7 @@ function App() {
   }
 
   const getMakeUp = () => {
-    Promise.all([NYX, maybelline, milani, clinique, covergirl, smashbox])
+    Promise.all([NYX, maybelline, milani, clinique, covergirl])
       .then(data => {
         const shuffled = shuffleMakeUp(data.flat())
         setMakeUpItems(shuffled)
@@ -43,7 +43,7 @@ function App() {
 
   return (
     <div className="App">
-      {error ? <div><ErrorMessage /></div> : !makeUpItems ?  
+      {error ? <div><ErrorMessage /></div> : makeUpItems.length === 0 ?  
       <div className='loading'>
         <p className='patience'>patience is your superpower</p>
         <ReactLoading type={'spokes'} color={'white'} height={'10%'} width={'10%'} />
