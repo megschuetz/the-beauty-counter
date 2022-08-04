@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import MakeUpCard from '../MakeUpCard/MakeUpCard';
 import './MakeUpContainer.css';
+import PropTypes from 'prop-types';
 
 function MakeUpContainer({ allMakeUp, type, filterByType }) {
 
@@ -19,7 +20,6 @@ function MakeUpContainer({ allMakeUp, type, filterByType }) {
           name={makeUp.name}
           price={makeUp.price}
           brand={makeUp.brand}
-          type={makeUp.product_type}
           image={makeUp.image_link}
         /> 
     )
@@ -33,3 +33,9 @@ function MakeUpContainer({ allMakeUp, type, filterByType }) {
 }
 
 export default MakeUpContainer;
+
+MakeUpContainer.propTypes = {
+  allMakeUp: PropTypes.array,
+  type: PropTypes.string,
+  filterByType: PropTypes.func
+}

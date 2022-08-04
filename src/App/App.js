@@ -2,13 +2,17 @@ import './App.css';
 import React, { useEffect, useState }from 'react'
 import { NYX, maybelline, milani, clinique, covergirl, smashbox } from '../apiCalls';
 import MakeUpContainer from '../MakeUpContainer/MakeUpContainer';
+import ErrorMessage from '../ErrorPage/ErrorPage';
 import { Route } from 'react-router-dom';
 import Dropdown from '../Dropdown/Dropdown';
+import PropTypes from 'prop-types';
+import ReactLoading from 'react-loading';
 
 function App() {
 
   const [makeUpItems, setMakeUpItems] = useState('');
   const [makeUpByType, setMakeUpByType] = useState('');
+  const [error, setError] = useState('')
 
   const shuffleMakeUp = array => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -24,6 +28,7 @@ function App() {
         const shuffled = shuffleMakeUp(data.flat())
         setMakeUpItems(shuffled)
     })
+      .catch(error => setError(error))
   };
 
   const filterByType = (type) => {
@@ -38,7 +43,11 @@ function App() {
 
   return (
     <div className="App">
-      {makeUpItems && 
+      {error ? <div><ErrorMessage /></div> : !makeUpItems ?  
+      <div className='loading'>
+        <p className='patience'>patience is your superpower</p>
+        <ReactLoading type={'spokes'} color={'white'} height={'10%'} width={'10%'} />
+      </div> : 
       <div>
         <div className='header'>
           <h4>· wild spirit, soft heart, sweet soul ·</h4>
@@ -59,3 +68,8 @@ function App() {
 };
 
 export default App;
+
+App.propTypes = {
+  makeUpItems: PropTypes.array,
+  makeUpByType: PropTypes.array
+}

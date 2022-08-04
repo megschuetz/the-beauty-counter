@@ -1,7 +1,8 @@
-import React from 'react'
-import './MakeUpCard.css'
+import React from 'react';
+import './MakeUpCard.css';
+import PropTypes from 'prop-types';
 
-function MakeUpCard({ name, price, brand, type, image}) {
+function MakeUpCard({ name, price, brand, image}) {
   
   return (
     <div className='makeup-card'>
@@ -15,6 +16,13 @@ function MakeUpCard({ name, price, brand, type, image}) {
       </div>
     </div>
   )
-}
+};
 
-export default MakeUpCard
+export default MakeUpCard;
+
+MakeUpCard.propTypes = {
+  name: PropTypes.string,
+  price: PropTypes.string,
+  brand: PropTypes.string,
+  image: PropTypes.string
+}

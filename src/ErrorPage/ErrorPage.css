@@ -1,0 +1,10 @@
+.error-msg {
+  color: white;
+  text-align: center;
+  padding-top: 35%;
+}
+
+.error-page {
+  background-color: #A93F55;
+  height: 100vh;
+}
