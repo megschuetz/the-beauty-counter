@@ -1,16 +1,28 @@
-import React from 'react'
-import './MakeUpCard.css'
+import React from 'react';
+import './MakeUpCard.css';
+import PropTypes from 'prop-types';
 
-function MakeUpCard({ name, price, brand, type, tags, image}) {
+function MakeUpCard({ name, price, brand, image}) {
   
   return (
     <div className='makeup-card'>
-      <img src={image}/>
-      <p className='name'>{name}</p>
-      <p className='brand'>{brand}</p>
-      <p className='price'>${price}</p>
+      <div className='product-img'>
+        <img src={image}/>
+      </div>
+      <div className='product-description'>
+        <p className='name'>{name}</p>
+        <p className='brand'>{brand}</p>
+        <p className='price'>Est. Cost - ${Math.round(price)}</p>
+      </div>
     </div>
   )
-}
+};
 
-export default MakeUpCard
+export default MakeUpCard;
+
+MakeUpCard.propTypes = {
+  name: PropTypes.string,
+  price: PropTypes.string,
+  brand: PropTypes.string,
+  image: PropTypes.string
+}
