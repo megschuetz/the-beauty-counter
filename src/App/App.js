@@ -52,7 +52,7 @@ function App() {
         <div className='header'>
           <h4>· wild spirit, soft heart, sweet soul ·</h4>
           <div className="title">
-            <h2>TheBeautyCounter</h2>
+            <h2 className='shown-title'>TheBeautyCounter</h2>
             <h2>TheBeautyCounter</h2>
           </div>
           <Dropdown allMakeUp={makeUpItems}/>

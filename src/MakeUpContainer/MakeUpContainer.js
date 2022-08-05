@@ -21,6 +21,7 @@ function MakeUpContainer({ allMakeUp, type, filterByType }) {
           name={makeUp.name}
           price={makeUp.price}
           brand={makeUp.brand}
+          type={makeUp.product_type}
           image={makeUp.image_link}
         /> 
     )
