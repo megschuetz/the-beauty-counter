@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useEffect, useState }from 'react'
-import { NYX, maybelline, milani, clinique, covergirl, smashbox } from '../apiCalls';
+import { NYX, maybelline, milani, clinique, covergirl} from '../apiCalls';
 import MakeUpContainer from '../MakeUpContainer/MakeUpContainer';
 import ErrorMessage from '../ErrorPage/ErrorPage';
 import { Route } from 'react-router-dom';
