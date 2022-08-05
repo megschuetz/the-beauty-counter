@@ -48,7 +48,7 @@
 
 - Add a 'hearting' feature to save like items for later.
 
-- Have brand categories in a top nav bar. 
+- Make header responsive for mobile. 
 
 - Make each item clickable to another view of all details about that product.
 
