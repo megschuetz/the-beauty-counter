@@ -42,28 +42,28 @@ function App() {
   
 
   return (
-    <div className="App">
+    <body className="App">
       {error ? <div><ErrorMessage /></div> : makeUpItems.length === 0 ?  
-      <div className='loading'>
+      <section className='loading'>
         <p className='patience'>patience is your superpower</p>
         <ReactLoading type={'spokes'} color={'white'} height={'10%'} width={'10%'} />
-      </div> : 
-      <div>
-        <div className='header'>
+      </section> : 
+      <section>
+        <header className='header'>
           <h4>· wild spirit, soft heart, sweet soul ·</h4>
           <div className="title">
             <h2 className='shown-title'>TheBeautyCounter</h2>
             <h2>TheBeautyCounter</h2>
           </div>
           <Dropdown />
-        </div>
+        </header>
         <Route exact path='/' render={() => <MakeUpContainer allMakeUp={makeUpItems}/>}/>
         <Route exact path='/:product_type' render={({ match }) => 
         <MakeUpContainer allMakeUp={makeUpByType} type={match.params.product_type} filterByType={filterByType}/>
       }/>
-      </div>
+      </section>
       }
-    </div>
+    </body>
   );
 };
 
