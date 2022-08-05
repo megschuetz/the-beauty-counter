@@ -55,7 +55,7 @@ function App() {
             <h2 className='shown-title'>TheBeautyCounter</h2>
             <h2>TheBeautyCounter</h2>
           </div>
-          <Dropdown allMakeUp={makeUpItems}/>
+          <Dropdown />
         </div>
         <Route exact path='/' render={() => <MakeUpContainer allMakeUp={makeUpItems}/>}/>
         <Route exact path='/:product_type' render={({ match }) => 
