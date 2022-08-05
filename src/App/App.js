@@ -12,7 +12,7 @@ function App() {
 
   const [makeUpItems, setMakeUpItems] = useState([]);
   const [makeUpByType, setMakeUpByType] = useState([]);
-  const [error, setError] = useState('')
+  const [error, setError] = useState('');
 
   const shuffleMakeUp = array => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -20,7 +20,7 @@ function App() {
       [array[i], array[j]] = [array[j], array[i]]
     }
     return array
-  }
+  };
 
   const getMakeUp = () => {
     Promise.all([NYX, maybelline, milani, clinique, covergirl])
@@ -71,5 +71,6 @@ export default App;
 
 App.propTypes = {
   makeUpItems: PropTypes.array,
-  makeUpByType: PropTypes.array
+  makeUpByType: PropTypes.array,
+  error: PropTypes.string
 }

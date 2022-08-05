@@ -3,6 +3,10 @@
   grid-gap: .5rem;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   padding: 50px;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
 }
 
 .num-items {

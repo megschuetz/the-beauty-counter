@@ -7,7 +7,7 @@ function fetchResponse(url) {
       }
       throw Error(response.statusText)
     })
-  )
+  );
 };
 
 const NYX = fetchResponse('http://makeup-api.herokuapp.com/api/v1/products.json?brand=nyx');

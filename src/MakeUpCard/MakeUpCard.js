@@ -15,7 +15,7 @@ function MakeUpCard({ name, price, brand, type, image}) {
         <p className='price'>Est. Cost - ${Math.round(price)}</p>
       </div>
     </div>
-  )
+  );
 };
 
 export default MakeUpCard;
