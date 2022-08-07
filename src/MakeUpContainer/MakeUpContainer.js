@@ -4,7 +4,6 @@ import './MakeUpContainer.css';
 import PropTypes from 'prop-types';
 
 function MakeUpContainer({ allMakeUp, type, filterByType }) {
-  console.log(allMakeUp)
 
   useEffect(() => {
     if(type && filterByType) {
@@ -21,20 +20,21 @@ function MakeUpContainer({ allMakeUp, type, filterByType }) {
           name={makeUp.name}
           price={makeUp.price}
           brand={makeUp.brand}
+          type={makeUp.product_type}
           image={makeUp.image_link}
         /> 
     )
   };
 
   return(
-    <section className='makeup-container'>
+    <section>
       <p className='num-items'>{allMakeUp.length} Items</p>
       <div className='makeup-cards'>
         {makeUpCards}
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default MakeUpContainer;
 

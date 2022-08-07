@@ -2,19 +2,7 @@ import React from 'react';
 import "./Dropdown.css";
 import { NavLink } from 'react-router-dom';
 
-function Dropdown({ allMakeUp }) {
-
-  // const productTypes = allMakeUp.reduce((types, makeup) => {
-  //   if(!types.includes(makeup.product_type)) {
-  //     types.push(makeup.product_type)
-  //   }
-  //   return types
-  // }, []);
-
-  // const navLinks = productTypes.map((type) => {
-  //   return <NavLink className='link' to={`./${type}`}>{type}</NavLink>
-  // });
-
+function Dropdown() {
 
   return (
     <div className='type-list'>
