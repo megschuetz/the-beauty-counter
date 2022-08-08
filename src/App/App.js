@@ -42,7 +42,7 @@ function App() {
   
 
   return (
-    <body className="App">
+    <div className="App">
       {error ? <div><ErrorMessage /></div> : makeUpItems.length === 0 ?  
       <section className='loading'>
         <p className='patience'>patience is your superpower</p>
@@ -63,7 +63,7 @@ function App() {
       }/>
       </section>
       }
-    </body>
+    </div>
   );
 };
 
