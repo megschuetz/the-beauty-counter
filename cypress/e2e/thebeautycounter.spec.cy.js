@@ -1,11 +1,11 @@
 describe('TheBeautyCounter App', () => {
   
   beforeEach(() => {
-    cy.intercept('GET', 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=nyx', { fixture: 'nyx'})
-    cy.intercept('GET', 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline', { fixture: 'maybelline'})
-    cy.intercept('GET', 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=milani', { fixture: 'milani'})
-    cy.intercept('GET', 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=clinique', { fixture: 'clinique'})
-    cy.intercept('GET', 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl', { fixture: 'covergirl'})
+    cy.intercept('GET', 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=nyx', { fixture: 'nyx'})
+    cy.intercept('GET', 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline', { fixture: 'maybelline'})
+    cy.intercept('GET', 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=milani', { fixture: 'milani'})
+    cy.intercept('GET', 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=clinique', { fixture: 'clinique'})
+    cy.intercept('GET', 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl', { fixture: 'covergirl'})
     cy.visit('http://localhost:3000/')
   });
 
@@ -85,19 +85,19 @@ describe('TheBeautyCounter App', () => {
   });
 
   it('Should display an error message if a network request fails 404.', () => {
-    cy.intercept('GET', 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=nyx', {
+    cy.intercept('GET', 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=nyx', {
       statusCode: 404
     })
-    cy.intercept('GET', 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline', {
+    cy.intercept('GET', 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline', {
       statusCode: 404
     })
-    cy.intercept('GET', 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=milani', {
+    cy.intercept('GET', 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=milani', {
       statusCode: 404
     })
-    cy.intercept('GET', 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=clinique', {
+    cy.intercept('GET', 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=clinique', {
       statusCode: 404
     })
-    cy.intercept('GET', 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl', {
+    cy.intercept('GET', 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl', {
       statusCode: 404
     })
     cy.visit('http://localhost:3000')
@@ -105,19 +105,19 @@ describe('TheBeautyCounter App', () => {
   });
 
   it('Should display an error message if a network request fails 500.', () => {
-    cy.intercept('GET', 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=nyx', {
+    cy.intercept('GET', 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=nyx', {
       statusCode: 500
     })
-    cy.intercept('GET', 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline', {
+    cy.intercept('GET', 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline', {
       statusCode: 500
     })
-    cy.intercept('GET', 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=milani', {
+    cy.intercept('GET', 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=milani', {
       statusCode: 500
     })
-    cy.intercept('GET', 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=clinique', {
+    cy.intercept('GET', 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=clinique', {
       statusCode: 500
     })
-    cy.intercept('GET', 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl', {
+    cy.intercept('GET', 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl', {
       statusCode: 500
     })
     cy.visit('http://localhost:3000')
