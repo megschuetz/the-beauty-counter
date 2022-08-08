@@ -71,7 +71,7 @@ https://user-images.githubusercontent.com/98415017/183320909-666bf756-bbf5-46fa-
 
 6. Run `npm start` in the terminal to see the application. 
 
-7. Run `npm run cypress` in the terminal  to run cypress tests. 
+7. Run `npx cypress open` in the terminal  to run cypress tests. 
 
 8. When finished with the application, type `Control + C` in the terminal to stop running the application. 
 
