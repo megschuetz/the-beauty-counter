@@ -1,5 +1,6 @@
 .makeup-card {
   width: 400px;
+  padding: 10px;
 }
 
 .makeup-card:hover {
