@@ -45,6 +45,7 @@ https://user-images.githubusercontent.com/98415017/183320909-666bf756-bbf5-46fa-
 - Cypress
 - Fetch API
 - Postman
+- NPM - react-loading
 
 ## Reflections
 
