@@ -66,7 +66,7 @@ h4 {
 	color: #fff;
 	font-size: 8em;
 	position: absolute;
-	transform: translate(-50%, -50%);
+	transform: translate(-44%, -50%);
 }
 
 .title h2:nth-child(1) {
@@ -77,6 +77,10 @@ h4 {
 .title h2:nth-child(2) {
 	color: #FDB1B7;
 	animation: animate 4s ease-in-out infinite;
+}
+
+.small-title {
+	visibility: hidden;
 }
 
 @keyframes animate {
@@ -107,5 +111,19 @@ h4 {
 			100% 100%,
 			0% 100%
 		);
+	}
+}
+
+@media (max-width: 1300px) {
+	h2 {
+		visibility: hidden;
+	}
+
+	.small-title {
+		color: #FDB1B7;
+		text-align: center;
+		visibility: visible;
+		font-size: 8rem;
+		font-weight: bolder;
 	}
 }
