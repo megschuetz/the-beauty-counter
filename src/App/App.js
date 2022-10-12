@@ -54,6 +54,7 @@ function App() {
           <div className="title">
             <h2 className='shown-title'>TheBeautyCounter</h2>
             <h2>TheBeautyCounter</h2>
+            <p className='small-title'>The Beauty Counter</p>
           </div>
           <Dropdown />
         </header>
