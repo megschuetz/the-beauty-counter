@@ -19,7 +19,7 @@
 
 ## Deployed Link
 
-- [Deploy Link](https://the-beauty-counter.herokuapp.com/) 
+- [Deploy Link](https://the-beauty-counter.vercel.app/) 
 
 ## Illustrations
 
