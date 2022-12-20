@@ -1,11 +1,12 @@
 import React from 'react';
 import './MakeUpCard.css';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-function MakeUpCard({ name, price, brand, type, image}) {
+function MakeUpCard({ id, name, price, brand, type, image}) {
   
   return (
-    <div className='makeup-card'>
+    <Link className='makeup-card' to={`./id/${id}`}>
       <div className='product-img'>
         <img alt={`${type}-product-img`} src={image}/>
       </div>
@@ -14,7 +15,7 @@ function MakeUpCard({ name, price, brand, type, image}) {
         <p className='brand'>{brand}</p>
         <p className='price'>Est. Cost - ${Math.round(price)}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 
