@@ -4,7 +4,7 @@ import './ProductPage.css';
 
 function ProductPage({allMakeUp, id}) {
 
-  const 
+  
 
  return(
   <div>

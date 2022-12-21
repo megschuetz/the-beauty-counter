@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function MakeUpCard({ id, name, price, brand, type, image}) {
   
   return (
-    <Link className='makeup-card' to={`./id/${id}`}>
+    <Link className='makeup-card' to={`./id/${id}`} end='true'>
       <div className='product-img'>
         <img alt={`${type}-product-img`} src={image}/>
       </div>

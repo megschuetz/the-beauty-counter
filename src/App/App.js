@@ -57,7 +57,7 @@ function App() {
             <h2>TheBeautyCounter</h2>
             <p className='small-title'>The Beauty Counter</p>
           </div>
-          <Route exact path='/:product_type' render={() => <Dropdown />}/>
+          <Dropdown/>
         </header>
         <Route exact path='/' render={() => <MakeUpContainer allMakeUp={makeUpItems}/>}/>
         <Route exact path='/:product_type' render={({ match }) =>
