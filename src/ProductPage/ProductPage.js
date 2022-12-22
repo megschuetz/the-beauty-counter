@@ -5,29 +5,38 @@ import stars from '../stars.jpeg'
 
 function ProductPage({allMakeUp, id}) {
 
-  
   const product = allMakeUp.find((product) => product.id === parseInt(id))
+
+  const { image_link, name, product_type, brand, price, description, product_link, website_link } = product
 
   const openInNewTab = (url) => {
     window.open(url, '_blank', 'noopener,noreferrer')
   }
   
-  console.log('details', product)
+  const getPrice = () => {
+    if(!price) {
+      return 'Price Unknown'
+    }
+    return `$${parseInt(price).toFixed(2)}`
+  }
+
 
  return(
   <div className='product-view'>
-    <img className='single-img' src={product.image_link} onClick={() => openInNewTab(product.product_link)}></img>
+    <section className='single-img-container'>
+      <img className='single-img' src={image_link} onClick={() => openInNewTab(product_link)}></img>
+    </section>
     <section className='single-prod-description'>
-      <p className='single-brand' onClick={() => openInNewTab(product.website_link)}>{product.brand}</p>
-      <p className='single-name'>{product.name}</p>
-      <p className='tiny-text'>Beauty | {product.product_type}</p>
+      <p className='single-brand' onClick={() => openInNewTab(website_link)}>{brand}</p>
+      <p className='single-name'>{name}</p>
+      <p className='tiny-text'>Beauty | {product_type}</p>
       <div className='rating'>
         <img className='stars' src={stars}/>
         <p className='rating'>4.2</p>
       </div>
-      <p className='single-price'>${parseInt(product.price).toFixed(2)}</p>
-      <p className='single-description'>{product.description}</p>
-      <button className='find' onClick={() => openInNewTab(product.product_link)}>Find</button>
+      <p className='single-price'>{getPrice()}</p>
+      <p className='single-description'>{description}</p>
+      <button className='find' onClick={() => openInNewTab(product_link)}>Find</button>
     </section>
   </div>
  );

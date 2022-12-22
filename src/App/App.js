@@ -3,6 +3,7 @@ import React, { useEffect, useState }from 'react'
 import { NYX, maybelline, milani, clinique, covergirl} from '../apiCalls';
 import MakeUpContainer from '../MakeUpContainer/MakeUpContainer';
 import ProductPage from '../ProductPage/ProductPage';
+import Footer from '../Footer/Footer';
 import ErrorMessage from '../ErrorPage/ErrorPage';
 import { Route } from 'react-router-dom';
 import Dropdown from '../Dropdown/Dropdown';
@@ -57,13 +58,14 @@ function App() {
             <h2>TheBeautyCounter</h2>
             <p className='small-title'>The Beauty Counter</p>
           </div>
-          <Dropdown/>
+          <Dropdown />
         </header>
         <Route exact path='/' render={() => <MakeUpContainer allMakeUp={makeUpItems}/>}/>
         <Route exact path='/:product_type' render={({ match }) =>
           <MakeUpContainer allMakeUp={makeUpByType} type={match.params.product_type} filterByType={filterByType}/>
         }/>
         <Route exact path='/id/:product_id' render={({ match }) => <ProductPage allMakeUp={makeUpItems} id={match.params.product_id}/>}/>
+        <Footer />
       </section>
       }
     </div>

@@ -13,7 +13,9 @@ function MakeUpCard({ id, name, price, brand, type, image}) {
       <div className='product-description'>
         <p className='name'>{name}</p>
         <p className='brand'>{brand}</p>
-        <p className='price'>Est. Cost - ${parseInt(price).toFixed(2)}</p>
+        {price ? <p className='price'>Shop - ${parseInt(price).toFixed(2)}</p> :
+        <p className='price'>Shop</p>
+        }
       </div>
     </Link>
   );
