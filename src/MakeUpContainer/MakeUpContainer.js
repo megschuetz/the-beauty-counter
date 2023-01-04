@@ -17,6 +17,7 @@ function MakeUpContainer({ allMakeUp, type, filterByType }) {
     makeUpCards = allMakeUp.map((makeUp) => 
         <MakeUpCard 
           key={makeUp.id}
+          id={makeUp.id}
           name={makeUp.name}
           price={makeUp.price}
           brand={makeUp.brand}

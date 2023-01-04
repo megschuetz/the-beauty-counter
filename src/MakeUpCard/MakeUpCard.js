@@ -1,20 +1,23 @@
 import React from 'react';
 import './MakeUpCard.css';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-function MakeUpCard({ name, price, brand, type, image}) {
+function MakeUpCard({ id, name, price, brand, type, image}) {
   
   return (
-    <div className='makeup-card'>
+    <Link className='makeup-card' to={`./id/${id}`} end='true'>
       <div className='product-img'>
         <img alt={`${type}-product-img`} src={image}/>
       </div>
       <div className='product-description'>
         <p className='name'>{name}</p>
         <p className='brand'>{brand}</p>
-        <p className='price'>Est. Cost - ${Math.round(price)}</p>
+        {price ? <p className='price'>Shop - ${parseInt(price).toFixed(2)}</p> :
+        <p className='price'>Shop</p>
+        }
       </div>
-    </div>
+    </Link>
   );
 };
 
