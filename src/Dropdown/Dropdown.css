@@ -28,7 +28,6 @@
 .all:hover {
   color: #A93F55;
   border: solid #A93F55 1px;
-  border-radius: 17px;
   background-color: white;
 }
 
@@ -36,7 +35,6 @@
 .link.active {
   color: #FDB1B7;
   border: solid #FDB1B7 1px;
-  border-radius: 17px;
   background-color: white;
 }
 
