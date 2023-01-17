@@ -27,6 +27,7 @@
 
 ![Screen Shot 2022-08-07 at 7 28 29 PM](https://user-images.githubusercontent.com/98415017/183321208-2b2f22e9-1bf2-4fd2-8028-ecc0ef95cf81.png)
 
+<img width="1431" alt="Screen Shot 2023-01-17 at 12 49 58 PM" src="https://user-images.githubusercontent.com/98415017/212997774-2393950c-4ab9-437d-b33d-0a7d8dbddfa5.png">
 
 https://user-images.githubusercontent.com/98415017/183320909-666bf756-bbf5-46fa-9ab9-0bd8a0feaf77.mp4
 
